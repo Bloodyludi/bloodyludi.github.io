@@ -1,0 +1,15 @@
+# Created by https://www.gitignore.io
+
+### Sass ###
+.sass-cache
+
+
+### KomodoEdit ###
+*.komodoproject
+.komodotools
+
+# Thumbnails
+._*
+
+### Jekyll ###
+_site/

@@ -1,0 +1,63 @@
+.welcome
+    width: 100%
+    height: 100%
+    position: relative
+    
+    .wrap-top
+        position: absolute
+        width: 100%
+        top: 17%
+        +animation(fadeInDown 2s cubic-bezier(.62,.14,.41,.9) both)
+        
+        .title
+            text-align: center
+            font:
+                size: 8em
+                weight: 400
+            color: $accent-color
+            letter-spacing: 0.05em
+            line-height: 1
+            margin: 20px 0
+            
+        .subtitle
+            text-align: center
+            font:
+                weight: 400
+                size: 2em
+            color: $text-color
+            letter-spacing: 0.05em
+            line-height: 1
+    
+    .wrap-bottom
+        position: absolute
+        width: 100%
+        bottom: 5%
+        +animation(move-loop 1s cubic-bezier(.62,.14,.41,.9) infinite alternate)
+        
+        .button
+            margin: 20px 0
+            text-align: center
+            font:
+                weight: 700
+            a
+                display: inline-block
+                padding: 0.5em 1em
+                border: $text-color solid 1px
+                border-radius: 5px
+                color: $text-color
+                &:hover
+                    color: $text-color
+                    background: $link-color
+            i
+                margin-right: 0.65em
+        
+        .arrow
+            text-align: center
+            a
+                font-size: 2.5em
+                line-height: 1em
+                color: $text-color
+                &:hover
+                    color: $accent-color
+                    
+            

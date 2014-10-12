@@ -1,0 +1,67 @@
+//	Typography
+
+h1, h2, h3, h4, h5, h6
+  color: $accent-color
+  font-weight: bold
+
+h1
+  font-size: 2em
+
+h2
+  font-size: 1.75em
+
+h3
+  font-size: 1.5em
+
+h4
+  font-size: 1.2em
+
+em
+  font-style: italic
+
+strong
+  font-weight: bold
+
+// Links
+
+a
+  color: $link-color
+  text-decoration: none
+  outline: 0
+  
+a:hover, a:focus
+  color: lighten($link-color, 20%)
+
+
+
+// Selection colors (easy to forget)
+
+::selection
+  color: $bg-color
+  background: $selection-color
+  
+::-moz-selection
+  color: $bg-color
+  background: $selection-color
+  
+img::selection
+  background: transparent
+  
+img::-moz-selection
+  background: transparent
+  
+body
+  -webkit-tap-highlight-color: $selection-color
+
+
+
+// Basic Styles
+
+body
+  background: $bg-color
+  font-size: 1em
+  line-height: 1.6
+  font-family: 'Josefin Sans', sans-serif
+  color: $text-color
+  -webkit-font-smoothing: antialiased
+  -webkit-text-size-adjust: 100%

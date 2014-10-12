@@ -1,0 +1,14 @@
+# Build settings
+
+markdown: kramdown
+permalink: pretty
+highlighter: rouge
+encoding: utf-8
+
+port: 3000
+
+exclude: ['PortfolioSK.komodoproject']
+
+sass:
+  sass_dir: assets/css
+  style: :nested

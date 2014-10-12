@@ -1,0 +1,112 @@
+.work
+    overflow-x: hidden
+    
+    h2
+        +margin(10px 20px 40px 20px)
+        font:
+            weight: 400
+            size: 2em
+        letter-spacing: 0.05em
+        line-height: 1
+
+.work-slider
+    width: 200%
+    position: relative
+    left: 0
+    +transition(left 1.2s ease-in-out)
+    
+.thumb-wrap, .work-wrap
+    width: 50%
+    float: left
+    position: relative
+
+
+.thumb-container
+    margin: 0 10px
+    //max-width: 960px
+    
+    .thumb-unit
+        cursor: pointer
+        display: block
+        width: 25%
+        float: left
+        position: relative
+        padding-top: 25%
+        +perspective(300)
+        
+        @media screen and (max-width:940px)
+            width: 50%
+            padding-top: 50%
+        
+        .thumb-img
+            //overflow: hidden
+            margin: 10px
+            +position(absolute, 0px 0px 0px 0px)
+            background:
+                position: center center
+                repeat: no-repeat
+                size: cover
+            filter: grayscale(100%)
+            -webkit-filter: grayscale(100%)
+            +transition(600ms)
+            
+        
+        .thumb-overlay
+            z-index: 2
+            +position(absolute, 0 0 null 0)
+            height: 100%
+            background: fade-out($accent-color, 0.25)
+            text-align: center
+            opacity: 0
+            +transition(opacity 0s linear 0)
+            +transform(scale(0,0))
+            
+            //+transform-origin(center bottom)
+            //+transform(scale(0, 0))
+            
+            strong
+                display: block
+                padding: 40px
+                color: $bg-color
+                text-transform: uppercase
+                font:
+                    weight: 500
+                    size: 1.5em
+            i
+                +position(absolute, 50% 0 0 0)
+                +transform(translateY(-16px))
+                color: $bg-color
+                font-size: 32px
+        
+        &:hover
+            .thumb-img
+                filter: none
+                -webkit-filter: grayscale(0%)
+                
+            .thumb-overlay
+                +animation(bounceIn 1s linear 400ms both)
+                opacity: 1
+                +transition(opacity 500ms linear 400ms)
+                //top: 0%
+                //+transform(scale(1, 1))
+    
+.work-container
+    margin: 0 20px
+    display: none
+    
+    img
+        max-width: 100%
+        
+.work-return
+    +position(absolute, 50% null null null)
+    +transform(translateY(-50%))
+    cursor: pointer
+    font-size: 3em
+    line-height: 1em
+    color: $text-color
+    
+    @media (max-width: 740px)
+        +position(relative)
+    
+    &:hover
+        color: $accent-color
