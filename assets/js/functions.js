@@ -5,6 +5,8 @@ $( document ).ready(function() {
     loopBottom: true,
     css3: true,
   });
+  
+  $('body').fadeTo(500,1);
 });
 
 $(function() {
@@ -14,12 +16,12 @@ $(function() {
 
 function workBelt() {
     $('.thumb-unit').click(function() {
-        $('.work-slider').css('left','-100%');
+        $('.work-slider').addClass("slided");
         $('.work-container').animateShow(1200);
     });
     
     $('.work-return').click(function() {
-        $('.work-slider').css('left','0%');
+        $('.work-slider').removeClass("slided");
         $('.work-container').animateShow(800);
     })
 };
@@ -29,7 +31,7 @@ $.fn.animateShow = function(duration) {
 };
 
 function workLoad() {
-    $.ajaxSetup({ cache: false });
+    $.ajaxSetup({ cache: true });
     
     $('.thumb-unit').click(function() {
         var $this = $(this),
@@ -40,5 +42,6 @@ function workLoad() {
             
         $('.project-load').html(spinner).load(newHTML);
         $('.project-title').text(title);
+        
     });
 }

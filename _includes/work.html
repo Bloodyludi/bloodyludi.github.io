@@ -1,8 +1,8 @@
 <section class="work section" data-anchor="work">
     <div class="work-slider">
-        <h2>This is what I've been doing in the past.</h2>
         <div class="thumb-wrap">
             <div class="thumb-container">
+            <h2>This is what I've been doing in the past.</h2>
             {% for item in site.data.settings.works %}
                 <div class="thumb-unit" data-folder="{{item.folder}}">
                     <div class="thumb-img" style="background-image: url(/assets/img/work/{{item.folder}}/thumb.jpg);">
@@ -18,11 +18,11 @@
         
         <div class="work-wrap">
             <div class="work-container">
+                <div class="work-unit">
+                    <h3 class="project-title">...Loading Project...</h3>
+                    <div class="project-load"></div>
+                </div>
                 <i class="icon-arrow-left work-return"></i>
-                    <div class="work-unit">
-                        <h3 class="project-title">A Project Name</h3>
-                        <div class="project-load"></div>
-                    </div>
             </div>
         </div>
         

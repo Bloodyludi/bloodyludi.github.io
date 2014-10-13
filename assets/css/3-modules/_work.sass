@@ -1,6 +1,20 @@
 .work
     overflow-x: hidden
+
+.work-slider
+    width: 200%
+    position: relative
+    left: 0
+    +transition(all 1.2s ease-in-out)
+    +display(flex)
+    +align-items(center)
     
+    &.slided
+        +transform(translate3d(-50%, 0, 0))
+    
+.thumb-wrap, .work-wrap
+    width: 50%
+
     h2
         +margin(10px 20px 40px 20px)
         font:
@@ -9,21 +23,9 @@
         letter-spacing: 0.05em
         line-height: 1
 
-.work-slider
-    width: 200%
-    position: relative
-    left: 0
-    +transition(left 1.2s ease-in-out)
-    
-.thumb-wrap, .work-wrap
-    width: 50%
-    float: left
-    position: relative
-
-
 .thumb-container
-    margin: 0 10px
-    //max-width: 960px
+    max-width: 960px
+    margin: 0 auto
     
     .thumb-unit
         cursor: pointer
@@ -39,7 +41,6 @@
             padding-top: 50%
         
         .thumb-img
-            //overflow: hidden
             margin: 10px
             +position(absolute, 0px 0px 0px 0px)
             background:
@@ -60,9 +61,6 @@
             opacity: 0
             +transition(opacity 0s linear 0)
             +transform(scale(0,0))
-            
-            //+transform-origin(center bottom)
-            //+transform(scale(0, 0))
             
             strong
                 display: block
@@ -87,15 +85,10 @@
                 +animation(bounceIn 1s linear 400ms both)
                 opacity: 1
                 +transition(opacity 500ms linear 400ms)
-                //top: 0%
-                //+transform(scale(1, 1))
-    
+
 .work-container
     margin: 0 20px
     display: none
-    
-    img
-        max-width: 100%
         
 .work-return
     +position(absolute, 50% null null null)
@@ -110,3 +103,35 @@
     
     &:hover
         color: $accent-color
+
+.work-unit
+    margin: 0 auto
+    max-width: 960px
+.project-load
+    +display(flex)
+    +align-items(stretch)
+    +justify-content(space-between)
+    
+    .slider
+        width: 66%
+        margin-right: 10px
+        
+        a
+            background: $text-color
+            
+            &:hover
+                background: $accent-color
+                
+            &.active
+                background: $accent-color
+    
+    .description
+        margin-left: 10px
+        width: 33%
+        
+        p
+            margin-top: 0
+        
+        a
+            float: right
+        
