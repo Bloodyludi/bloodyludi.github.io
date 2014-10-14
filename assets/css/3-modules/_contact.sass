@@ -8,12 +8,14 @@
 
 .contact-wrap
     position: relative
-    +clearfix
+    +display(flex)
+    +align-items(stretch)
+    //+clearfix
 
 .contact-form-wrap, .social-wrap
     display: inline-block
     width: 50%
-    float: left
+    //float: left
     
     h4
         text:
@@ -28,9 +30,16 @@
     +transform(translateY(-2px))
     border-left: 4px solid $accent-color
 
-.social-wrap
+.legal
     p
         text-align: center
+
+.social-wrap
+    position: relative
+
+.social
+    margin: 0 40px
+    +position(absolute, null 0 10px 0)
 
 .social-icons
     margin: 0 auto

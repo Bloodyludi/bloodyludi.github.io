@@ -13,9 +13,11 @@ $( document ).ready(function() {
 $(function() {
     workBelt();
     workLoad();
+    
+    clickBlog();
 });
 
-function workBelt() {
+function clickBlog() {
     $('.thumb-unit').click(function() {
         $('.work-slider').addClass("slided");
         $('.work-container').animateShow(1200);
@@ -25,6 +27,22 @@ function workBelt() {
         $('.work-slider').removeClass("slided");
         $('.work-container').animateShow(800);
     })
+}
+
+function workBelt() {
+    $('.blog-navitem').click(function(event) {
+        var blogHTML = '/blog.html',
+            spinner = '<div class="loader">Loading...</div>';
+            
+        event.preventDefault();
+        
+        $('#fullpage').animateShow(500);
+        setTimeout(function (){
+            $('.content').empty();
+            $('.content').html(spinner).load(blogHTML);
+            $.fn.fullpage.destroy('all');
+         }, 500);
+    });
 };
 
 $.fn.animateShow = function(duration) {
