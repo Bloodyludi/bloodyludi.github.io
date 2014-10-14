@@ -2,6 +2,7 @@ $( document ).ready(function() {
 
   $('#fullpage').fullpage({
     anchors:['welcome', 'about','work','contact'],
+    menu: '#navigation',
     loopBottom: true,
     css3: true,
   });

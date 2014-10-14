@@ -5,6 +5,7 @@
     left: 0
     background: #2c2c2c
     width: 250px
+    +animation(fadeInRight 1s ease-in-out 600ms both)
 
 header
     .logo
@@ -17,8 +18,12 @@ header
             
             path
                 fill: rgba(0,0,0,0.4)
-        &:hover
-            +animation(logoAni 2000ms linear both)
+                +transition(fill 600ms)
+                
+            &:hover
+                +animation(logoAni 2000ms linear both)
+                path
+                    fill: $accent-color
             
     nav
         margin-top: 80px
@@ -32,12 +37,17 @@ header
             display: block
             text-align: center
             text-transform: uppercase
-            
             color: #06bb84
             font:
                 size: 16px
                 weight: 700
+            +transition(400ms)
+            
             &:hover
+                color: #2c2c2c
+                background: #06bb84
+                
+            &.active
                 color: #2c2c2c
                 background: #06bb84
 
