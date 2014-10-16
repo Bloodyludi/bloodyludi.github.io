@@ -6,26 +6,26 @@
     .wrap-top
         position: absolute
         width: 100%
-        top: 17%
+        top: 20%
         +animation(fadeInDown 2s cubic-bezier(.62,.14,.41,.9) both)
         
         .title
             text-align: center
             font:
-                size: 8em
+                size: 128px
                 weight: 400
             color: $accent-color
-            letter-spacing: 0.05em
-            line-height: 1
             margin: 20px 0
+            text-transform: none
+            line-height: 1
             
         .subtitle
             text-align: center
             font:
                 weight: 400
-                size: 2em
+                size: 32px
             color: $text-color
-            letter-spacing: 0.05em
+            text-transform: none
             line-height: 1
     
     .wrap-bottom
@@ -35,6 +35,7 @@
         +animation(move-loop 1s cubic-bezier(.62,.14,.41,.9) infinite alternate)
         
         .button
+            opacity: 0
             +animation(fadeInUp 2s cubic-bezier(.62,.14,.41,.9) both)
             margin: 20px 0
             text-align: center
@@ -42,13 +43,16 @@
                 weight: 700
             a
                 display: inline-block
-                padding: 0.5em 1em
-                border: $text-color solid 1px
-                border-radius: 5px
+                //padding: 0.4em 1.2em
+                //border: $text-color solid 1px
+                //border-radius: 5px
+                font
+                    family: 'Josefin Sans', sans-serif
+                    size: 15px
                 color: $text-color
                 &:hover
-                    color: $text-color
-                    background: $link-color
+                    color: $link-color
+                    //background: $link-color
             i
                 margin-right: 0.65em
         
@@ -56,10 +60,9 @@
             +animation(fadeInUp 2s cubic-bezier(.62,.14,.41,.9) both)
             text-align: center
             a
-                font-size: 2.5em
-                line-height: 1em
+                font-size: 42px
+                line-height: 1
                 color: $text-color
                 &:hover
                     color: $accent-color
-                    
             

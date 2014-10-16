@@ -13,21 +13,24 @@
         
         .column
             width: 50%
-            padding: 15px
+            padding: 0 40px
             @media (max-width: 960px)
                 width: auto
-            
+                
+            .thingsAni
+                display: inline-block
+                
             .face-img
-                +debug
+                display: block
                 border-radius: 50%
                 margin: 0 auto
                 +size(18.750em)
             
             a
                 @media (min-width: 960px)
-                    float: right
+                    //float: right
             
-.thingsAni
-    display: inline-block
-    &:hover
-        +animation(hinge 4s)
+            p
+                &:hover .thingsAni
+                    +animation(hinge 4s)
+            

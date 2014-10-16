@@ -5,6 +5,7 @@ $( document ).ready(function() {
     menu: '#navigation',
     loopBottom: true,
     css3: true,
+    resize: false
   });
   
   $('body').fadeTo(500,1);
