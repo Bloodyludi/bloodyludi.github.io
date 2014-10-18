@@ -6,7 +6,34 @@
     background: #2c2c2c
     width: 250px
     +animation(fadeInRight 1s ease-in-out 600ms both)
+    +transition()
+    box-shadow: inset -5px 0px 10px 0px rgba(0,0,0,0.4)
 
+.hide-sidebar
+    .sidebar
+        left: -250px
+    .sidebar-button
+        left: 0px
+    .content
+        left: 0px
+
+.sidebar-button
+    +animation(fadeInRight 1s ease-in-out 600ms both)
+    color: #2c2c2c
+    font-size: 38px
+    text-align: center
+    line-height: 50px
+    //background: #2c2c2c
+    +size(50px)
+    position: fixed
+    left: 250px
+    top: 0
+    z-index: 1
+    +transition()
+    
+    &:hover
+        color: $accent-color
+        //background: $accent-color
 header
     .logo
         +size(100px)
@@ -29,7 +56,6 @@ header
         margin-top: 80px
         
         a
-            background: #2c2c2c
             padding: 16px 0
             margin-top: 20px
             width: 100%
