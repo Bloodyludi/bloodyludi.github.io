@@ -94,7 +94,7 @@ function workLoad() {
     
     $('.thumb-unit').click(function() {
         var $this = $(this),
-            title = $this.find('strong').text(),
+            title = $this.find('.thumb-description').text(),
             folder = $this.data('folder'),
             spinner = '<div class="loader">Loading...</div>',
             newHTML = '/work/'+ folder +'.html';

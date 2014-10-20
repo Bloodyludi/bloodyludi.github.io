@@ -31,9 +31,9 @@
         padding-top: 33.33%
         +perspective(300)
         
-        @media screen and (max-width:940px)
+        /*@media screen and (max-width:940px)
             width: 50%
-            padding-top: 50%
+            padding-top: 50%*/
         
         .thumb-img
             margin: 10px
@@ -64,12 +64,19 @@
                 text-transform: uppercase
                 font:
                     weight: 500
-                    size: 1em
+                    size: 18px
             i
                 +position(absolute, 50% 0 0 0)
                 +transform(translateY(-16px))
                 color: $bg-color
                 font-size: 32px
+            
+            .thumb-tags
+                +position(absolute, 100% 0 0 0)
+                +transform(translateY(-90px))
+                font:
+                    weight: 300
+                    size: 16px
         
         &:hover
             .thumb-img
@@ -109,6 +116,7 @@
     
     .slider
         width: 66%
+        height: 100%
         margin-right: 10px
         
         a
@@ -128,4 +136,4 @@
             margin-top: 0
         a
             display: block
-        
+    

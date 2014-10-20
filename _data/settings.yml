@@ -4,16 +4,16 @@ works:
   tags: Animation
 - description: FatMama World
   folder: fatmama
-  tags: Game Dev
+  tags: Game Design / Modeling
 - description: HUE
   folder: hue
-  tags: Game Dev
+  tags: Game Dev / Mobile
 - description: Puppy Love
   folder: earthworm
-  tags: Game Dev
+  tags: Game Dev / Mobile / IOS
 - description: Grahylus
   folder: grahylus
-  tags: Game Dev, VR
+  tags: Game Dev / VR
 - description: Adsquare Teaser
   folder: pm
-  tags: Animation, PM
+  tags: Animation / PM
