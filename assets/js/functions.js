@@ -45,7 +45,7 @@ function clickBlog() {
     $('.thumb-unit').click(function() {
         $('.work-slider').addClass("slided");
         $('.work-container').animateShow(1200);
-        $('.thumb-container').animateshow(1200);
+        $('.thumb-container').animateShow(1200);
     });
     
     $('.work-return').click(function() {
