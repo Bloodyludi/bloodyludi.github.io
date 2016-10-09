@@ -45,11 +45,13 @@ function clickBlog() {
     $('.thumb-unit').click(function() {
         $('.work-slider').addClass("slided");
         $('.work-container').animateShow(1200);
+        $('.thump-container').animateshow(1200);
     });
     
     $('.work-return').click(function() {
         $('.work-slider').removeClass("slided");
         $('.work-container').animateShow(800);
+        $('.thump-container').animateShow(800);
     })
 }
 
