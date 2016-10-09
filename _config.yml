@@ -12,3 +12,5 @@ exclude: ['PortfolioSK.komodoproject']
 sass:
   sass_dir: assets/css
   style: :nested
+gems:
+  - kramdown 
