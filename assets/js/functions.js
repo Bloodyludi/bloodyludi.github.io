@@ -72,18 +72,11 @@ function sidebarButtonHandler() {
 
 
 function workBelt() {
-    $('.blog-navitem').click(function(event) {
-        var blogHTML = '/blog.html',
-            spinner = '<div class="loader">Loading...</div>';
-            
-        event.preventDefault();
-        
-        $('#fullpage').animateShow(500);
-        setTimeout(function (){
-            $('.content').empty();
-            $('.content').html(spinner).load(blogHTML);
-            $.fn.fullpage.destroy('all');
-         }, 500);
+    $('.fp-navitem').click(function(event) {
+        if (window.location.pathname.endsWith('blog/index.html')) {
+            event.preventDefault();
+            location.href = '/index.html' + event.currentTarget.hash;
+        }
     });
 };
 

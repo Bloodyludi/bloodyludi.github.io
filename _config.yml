@@ -7,7 +7,11 @@ encoding: utf-8
 
 port: 3000
 
-exclude: ['PortfolioSK.komodoproject']
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - CNAME
 
 sass:
   sass_dir: assets/css
