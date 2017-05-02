@@ -1,7 +1,3 @@
----
-permalink: /blog.html
----
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +11,7 @@ permalink: /blog.html
   <link rel="stylesheet" href="/assets/css/main.css" />
   <link rel="stylesheet" type="text/css" href="/assets/css/jquery.fullPage.css" />
 </head>
+
 <body>
 
 {% include sidebar.html %}
@@ -22,9 +19,7 @@ permalink: /blog.html
   Please activate JavaScript to view this website.
 </noscript>
 <div class="content">
-  <div class="blog">
-    <p>New Blog</p>
-  </div>
+  {{ content }}
 </div>
 
 <script src="/assets/js/jquery-2.1.1.min.js"></script>

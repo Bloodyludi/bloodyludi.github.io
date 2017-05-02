@@ -1,18 +1,18 @@
 $( document ).ready(function() {
+  if (selectorExists('#fullpage')) {
+    $('#fullpage').fullpage({
+      anchors:['welcome', 'about','work','contact'],
+      menu: '#navigation',
+      loopBottom: true,
+      css3: true,
+      resize: false
+    });
+  }
 
-  $('#fullpage').fullpage({
-    anchors:['welcome', 'about','work','contact'],
-    menu: '#navigation',
-    loopBottom: true,
-    css3: true,
-    resize: false
-  });
-  
   $('body').fadeTo(500,1);
 });
 
 $(function() {
-    workBelt();
     workLoad();
     
     clickBlog();
@@ -23,6 +23,10 @@ $(function() {
 $(window).resize(function() {
     detectScreenSize();
 });
+
+function selectorExists(selector) {
+  return $(selector).length;
+}
 
 function detectScreenSize() {
     if (($(window).width() <= 1023)) {
@@ -39,7 +43,6 @@ function detectScreenSize() {
         }
     }
 }
-
 
 function clickBlog() {
     $('.thumb-unit').click(function() {
@@ -69,16 +72,6 @@ function sidebarButtonHandler() {
         }
     });
 }
-
-
-function workBelt() {
-    $('.fp-navitem').click(function(event) {
-        if (window.location.pathname.endsWith('blog/index.html')) {
-            event.preventDefault();
-            location.href = '/index.html' + event.currentTarget.hash;
-        }
-    });
-};
 
 $.fn.animateShow = function(duration) {
   return this.animate({opacity: "toggle"}, duration || 1000);
